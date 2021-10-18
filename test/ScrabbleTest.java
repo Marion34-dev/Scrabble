@@ -11,12 +11,6 @@ public class ScrabbleTest {
     }
 
     @Test
-    public void returnsZeroForEmptyWords() {
-        Scrabble scrabble = new Scrabble("");
-        assertEquals(scrabble.score(), 0);
-    }
-
-    @Test
     public void returnsZeroForNull() {
         Scrabble scrabble = new Scrabble(null);
         assertEquals(scrabble.score(), 0);
