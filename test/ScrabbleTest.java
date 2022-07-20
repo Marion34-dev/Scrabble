@@ -47,37 +47,39 @@ public class ScrabbleTest {
     }
 
     @Test
-    public void returnsScoreFoDoubleWord() {
+    public void returnsScoreForDoubleWord() {
+        // Scrabble (String, Character[], Character[], boolean (doubleWord), boolean(tripleWord);
         Scrabble scrabble = new Scrabble("quirky", new Character[]{}, new Character[]{}, true, false);
         assertEquals(scrabble.score(), 44);
     }
 
     @Test
-    public void returnsScoreFoTripleWord() {
+    public void returnsScoreForTripleWord() {
         Scrabble scrabble = new Scrabble("quirky", new Character[]{}, new Character[]{}, false, true);
         assertEquals(scrabble.score(), 66);
     }
-
+    // Scrabble (String, Character[] (double letters), Character[], boolean, boolean;
     @Test
-    public void returnsScoreFoDoubleLetterWord() {
+    public void returnsScoreForDoubleLetterWord() {
         Scrabble scrabble = new Scrabble("a", new Character[]{'A'}, new Character[]{}, false, false);
         assertEquals(scrabble.score(), 2);
     }
 
     @Test
-    public void returnsScoreFoDoubleLetterOnlyOnce() {
+    public void returnsScoreForDoubleLetterOnlyOnce() {
         Scrabble scrabble = new Scrabble("aa", new Character[]{'A'}, new Character[]{}, false, false);
         assertEquals(scrabble.score(), 3);
     }
 
     @Test
-    public void returnsScoreFoTripleLetterWord() {
+    public void returnsScoreForTripleLetterWord() {
+        // Scrabble (String, Character[] , Character[] (triple letters), boolean, boolean;
         Scrabble scrabble = new Scrabble("a", new Character[]{}, new Character[]{'A'},false, false);
         assertEquals(scrabble.score(), 3);
     }
 
     @Test
-    public void returnsScoreFoTripleLetterOnlyOnce() {
+    public void returnsScoreForTripleLetterOnlyOnce() {
         Scrabble scrabble = new Scrabble("aa", new Character[]{}, new Character[]{'A'},false, false);
         assertEquals(scrabble.score(), 4);
     }
