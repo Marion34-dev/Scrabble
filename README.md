@@ -8,9 +8,9 @@ Welcome to the Scrabble challenge!
 
 ## Instructions
 
-1. Fork this repository and then:
+1. Fork this repository and then clone your copy:
 ```sh
-$ git clone git@github.com:digital-futures-academy/scrabble-challenge.git && cd scrabble-challenge
+$ git clone <YOUR GITHUB DETAILS>/scrabble-challenge.git && cd scrabble-challenge
 ```
 2. Run the tests from IntelliJ. There should be a failing test to begin with. You can run your test suite in a few ways:
    1. Right-click on the project and then select `Run all Tests`
