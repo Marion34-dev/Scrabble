@@ -8,7 +8,7 @@ public class Scrabble {
     public int score() {
         int totalScore = 0;
 
-        if (!input.isEmpty()) {
+        if (input != null && !input.isEmpty()) {
 
         }
         System.out.println("Your score is: " + totalScore);
