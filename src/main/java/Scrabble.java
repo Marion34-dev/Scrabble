@@ -2,13 +2,13 @@ public class Scrabble {
     public final String input;
 
     public Scrabble(String input) {
-        this.input = input;
+        this.input = (input != null && !input.isEmpty() ? input.toLowerCase() : "");
     }
 
     public int score() {
         int totalScore = 0;
 
-        if (input != null && !input.isEmpty()) {
+
             for (int i = 0; i < input.length(); i++) {
                 char letter = input.charAt(i);
 
@@ -28,8 +28,6 @@ public class Scrabble {
                 } else if (letter == 'q' || letter == 'z') {
                     totalScore += 10;
                 }
-
-            }
         }
         return totalScore;
     }
