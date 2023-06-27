@@ -34,7 +34,7 @@ public class ScrabbleTest {
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void returnsScoreForSimpleWord() {
         Scrabble scrabble = new Scrabble("street");
         assertEquals(scrabble.score(), 6);
