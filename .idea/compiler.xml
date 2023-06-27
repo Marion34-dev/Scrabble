@@ -9,8 +9,5 @@
         <module name="scrabble-challenge-java" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="scrabble-challenge-java" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
