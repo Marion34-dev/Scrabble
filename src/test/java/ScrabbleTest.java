@@ -55,13 +55,13 @@ public class ScrabbleTest {
     }
 
 //    @Test
-//    @Disabled
+//   // @Disabled
 //    public void returnsScoreForDoubleWord() {
 //        // Scrabble (String, Character[], Character[], boolean (doubleWord), boolean(tripleWord);
 //        Scrabble scrabble = new Scrabble("quirky", new Character[]{}, new Character[]{}, true, false);
 //        assertEquals(scrabble.score(), 44);
 //    }
-//
+
 //    @Test
 //    @Disabled
 //    public void returnsScoreForTripleWord() {

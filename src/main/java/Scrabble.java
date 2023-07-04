@@ -1,6 +1,8 @@
 public class Scrabble {
     public final String input;
 
+    private static final int[] letterValues = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+
     public Scrabble(String input) {
         this.input = (input != null && !input.isEmpty() ? input.toLowerCase() : "");
     }
@@ -8,27 +10,13 @@ public class Scrabble {
     public int score() {
         int totalScore = 0;
 
-
-            for (int i = 0; i < input.length(); i++) {
-                char letter = input.charAt(i);
-
-                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' ||
-                        letter == 'l' || letter == 'n' || letter == 'r' || letter == 's' || letter == 't') {
-                    totalScore += 1;
-                } else if (letter == 'd' || letter == 'g') {
-                    totalScore += 2;
-                } else if (letter == 'b' || letter == 'c' || letter == 'm' || letter == 'p') {
-                    totalScore += 3;
-                } else if (letter == 'f' || letter == 'h' || letter == 'v' || letter == 'w' || letter == 'y') {
-                    totalScore += 4;
-                } else if (letter == 'k') {
-                    totalScore += 5;
-                } else if (letter == 'j' || letter == 'x') {
-                    totalScore += 8;
-                } else if (letter == 'q' || letter == 'z') {
-                    totalScore += 10;
-                }
+            for (char c : input.toCharArray()) {
+            int charIndex = c - 'a';                  // Retrieving index by deducting Unicode value of char c
+            if (charIndex >= 0 && charIndex < letterValues.length) {   // Checking that index is valid within range of letterValues array
+                totalScore += letterValues[charIndex];
+            }
         }
+
         return totalScore;
     }
 }
